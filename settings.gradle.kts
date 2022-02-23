@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "compose-responsive.ui"
+rootProject.name = "compose-responsive-ui"
 
 include(":app")
