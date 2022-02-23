@@ -22,7 +22,7 @@ to create layout for different screen sizes based on the resources folder hierar
 Jetpack Compose has the concept of qualified resources for `layout` resources and has no inbuilt 
 was to determine current screen bucket size.  This base project includes :
 
---
+---
 
 `windowSize`
  
@@ -35,13 +35,13 @@ which includes size definitions of :
     LargePortrait,
     LargeLandscape;
 
---
+---
 
 `dimens`
 
 which includes dimen definitions
 
---
+---
 
 Both of these are available to any composable at runtime and are very simple implementations that 
 utilise `androidx.compose.runtime.CompositionLocalProvider` to provide these values at runtime.  
