@@ -63,9 +63,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun SingleOrTwoPane(isTwoPane: Boolean) {
     if (isTwoPane) {
-        // show single pane
-    } else {
         // show two pane
+    } else {
+        // show single pane
     }
 }
 ```
