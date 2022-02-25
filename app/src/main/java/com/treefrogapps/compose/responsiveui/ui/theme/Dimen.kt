@@ -18,8 +18,7 @@ data class Dimens internal constructor(
 data class Elevation internal constructor(
     val normal: Dp = 2.dp,
     val high: Dp = 4.dp,
-    val highest: Dp = 8.dp
-)
+    val highest: Dp = 8.dp)
 
 data class Spacing internal constructor(
     val tiny: Dp = 4.dp,
