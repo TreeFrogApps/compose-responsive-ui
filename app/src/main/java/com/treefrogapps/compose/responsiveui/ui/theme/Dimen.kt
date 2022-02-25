@@ -64,12 +64,7 @@ private val largeDimens: Dimens = Dimens(
         gigantic = 80.dp,
         enormous = 160.dp))
 
-private val LocalAppDimens = staticCompositionLocalOf { smallDimens }
-
-val dimens: Dimens
-    @ReadOnlyComposable
-    @Composable
-    get() = LocalAppDimens.current
+internal val LocalAppDimens = staticCompositionLocalOf { smallDimens }
 
 @Composable
 fun WithLocalDimens(

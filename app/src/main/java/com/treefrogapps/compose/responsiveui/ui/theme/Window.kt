@@ -36,12 +36,7 @@ enum class WindowSize {
     }
 }
 
-private val LocalWindowSize = staticCompositionLocalOf { WindowSize.SmallPortrait }
-
-val windowSize: WindowSize
-    @ReadOnlyComposable
-    @Composable
-    get() = LocalWindowSize.current
+internal val LocalWindowSize = staticCompositionLocalOf { WindowSize.SmallPortrait }
 
 @Composable
 fun WithLocalWindowSize(

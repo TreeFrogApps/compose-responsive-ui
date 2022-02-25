@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 
 val Shapes
     @Composable get() = Shapes(
-        small = RoundedCornerShape(dimens.spacing.small),
-        medium = RoundedCornerShape(dimens.spacing.normal),
-        large = RoundedCornerShape(dimens.spacing.large)
+        small = RoundedCornerShape(AppTheme.dimens.spacing.small),
+        medium = RoundedCornerShape(AppTheme.dimens.spacing.normal),
+        large = RoundedCornerShape(AppTheme.dimens.spacing.large)
     )
