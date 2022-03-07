@@ -38,16 +38,6 @@ enum class WindowSize {
 
 internal val LocalWindowSize = staticCompositionLocalOf { WindowSize.SmallPortrait }
 
-@Composable
-fun WithLocalWindowSize(
-    windowSize: WindowSize,
-    content: @Composable () -> Unit
-) {
-    CompositionLocalProvider(
-        values = arrayOf(LocalWindowSize provides remember { windowSize }),
-        content = content)
-}
-
 /**
  * Remembers the [WindowSize] class for the window corresponding to the current window metrics.
  */

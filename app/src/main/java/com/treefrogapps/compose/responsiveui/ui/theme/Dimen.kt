@@ -1,24 +1,24 @@
 package com.treefrogapps.compose.responsiveui.ui.theme
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.treefrogapps.compose.responsiveui.ui.theme.WindowSize.Companion.isMedium
 import com.treefrogapps.compose.responsiveui.ui.theme.WindowSize.Companion.isSmall
 
-
 data class Dimens internal constructor(
     val zero: Dp = 0.dp,
     val hairline: Dp = 0.5.dp,
     val one: Dp = 1.dp,
-    val elevation : Elevation = Elevation(),
+    val elevation: Elevation = Elevation(),
     val spacing: Spacing = Spacing(),
     val icon: Icon = Icon())
 
 data class Elevation internal constructor(
     val normal: Dp = 2.dp,
     val high: Dp = 4.dp,
-    val highest: Dp = 8.dp)
+    val highest: Dp = 8.dp
+)
 
 data class Spacing internal constructor(
     val tiny: Dp = 4.dp,
@@ -66,17 +66,7 @@ private val largeDimens: Dimens = Dimens(
 
 internal val LocalAppDimens = staticCompositionLocalOf { smallDimens }
 
-@Composable
-fun WithLocalDimens(
-    windowSize: WindowSize,
-    content: @Composable () -> Unit
-) {
-    CompositionLocalProvider(
-        values = arrayOf(LocalAppDimens provides remember { windowSize.toDimens() }),
-        content = content)
-}
-
-private fun WindowSize.toDimens(): Dimens =
+internal fun WindowSize.toDimens(): Dimens =
     when {
         isSmall()  -> smallDimens
         isMedium() -> mediumDimens
